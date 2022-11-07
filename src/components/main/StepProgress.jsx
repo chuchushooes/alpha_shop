@@ -1,3 +1,5 @@
+import { ReactComponent as PgComplete } from '../icons/pg-complete.svg' //將 SVG 圖檔包裝為 Component
+
 export function StepProgress () {
   return (
         <>
@@ -6,6 +8,7 @@ export function StepProgress () {
               <span className="progress-icon">
                 <span className="text">1</span>
                 <svg className="icon cursor-point">
+                  <PgComplete/>
                   {/* <use xlink:href="#svg-icon-pg-complete"></use> */}
                 </svg>
               </span>
@@ -16,6 +19,7 @@ export function StepProgress () {
               <span className="progress-icon">
                 <span className="text">2</span>
                 <svg className="icon cursor-point">
+                  <PgComplete/>
                   {/* <use xlink:href="#svg-icon-pg-complete"></use> */}
                 </svg>
               </span>
@@ -26,6 +30,7 @@ export function StepProgress () {
               <span className="progress-icon">
                 <span className="text">3</span>
                 <svg className="icon cursor-point">
+                  <PgComplete/>
                   {/* <use xlink:href="#svg-icon-pg-complete"></use> */}
                 </svg>
               </span>

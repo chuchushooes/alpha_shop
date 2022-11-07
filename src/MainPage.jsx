@@ -1,8 +1,10 @@
-import {StepProgress} from './components/StepProgress.jsx'
-import {Step1Address} from './components/Step1Address.jsx'
-import {Step2Shipping} from './components/Step2Shipping.jsx'
-import {Step3Creditcard} from './components/Step3Creditcard.jsx'
-import {ProgressControl} from './components/ProgressControl.jsx'
+import {StepProgress} from './components/main/StepProgress.jsx'
+import {Step1Address} from './components/main/Step1Address.jsx'
+import {Step2Shipping} from './components/main/Step2Shipping.jsx'
+import {Step3Creditcard} from './components/main/Step3Creditcard.jsx'
+import {ProgressControl} from './components/main/ProgressControl.jsx'
+
+/*本份作業還沒撰寫換頁邏輯*/
 
 export default function MainPage () {
   return (

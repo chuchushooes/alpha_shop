@@ -1,0 +1,78 @@
+.StepTwoShipping {
+  width: 100%;
+}
+
+.formTitle {
+  composes: formTitle from "./stepOneAddress.module.css";
+}
+
+.formBody {
+  height: 200px;
+  padding: 10px 0px;
+  composes: formBody from "./stepOneAddress.module.css";
+}
+
+.radioGroup {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  padding: 11px 20px;
+  margin-top: 24px;
+  cursor: pointer
+}
+
+.shippingStandard, .shippingDhl {
+  width: 10%;
+  height: 50%;
+}
+
+.radioInfo {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+}
+
+.col12 {
+  composes: formBody from "./mainPage.module.css";
+}
+
+.radioText {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  line-height: 16px
+}
+
+.period {
+  font-size: 12px;
+  line-height: 16px
+}
+
+.radioBoxBorder {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+.formBody .radioGroup input[type='radio']:checked~.radioBoxBorder {
+  border-radius: 4px;
+  border: 1px solid #2A2A2A
+}
+
+.formBody .radioGroup input[type='radio']~.radioBoxBorder {
+  border-radius: 4px;
+  border: 1px solid #F0F0F5
+}
+

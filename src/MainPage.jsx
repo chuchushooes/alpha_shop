@@ -1,26 +1,26 @@
 import {StepProgress} from './components/main/StepProgress.jsx'
-import {Step1Address} from './components/main/Step1Address.jsx'
-import {Step2Shipping} from './components/main/Step2Shipping.jsx'
-import {Step3Creditcard} from './components/main/Step3Creditcard.jsx'
+import {StepOneAddress} from './components/main/StepOneAddress.jsx'
+import {StepTwoShipping} from './components/main/StepTwoShipping.jsx'
+import {StepThreeCreditcard} from './components/main/StepThreeCreditcard.jsx'
 import {ProgressControl} from './components/main/ProgressControl.jsx'
+import styles from './css/mainPage.module.css'
 
-/*本份作業還沒撰寫換頁邏輯 */
 
 export default function MainPage () {
   return (
-    <main className="site-main">
-      <div className="main-container">
-        <h2 className="register-title col col-12">結帳</h2>
-        <section className="stepProgress">
-          <StepProgress />
+    <main className={`${styles} ${styles.siteMain}`}>
+      <section className={`${styles.registerContainer} ${styles.colLg6} ${styles.colSm12}`}>
+        <div className={styles.mainContainer}>
+          <h2 className={`${styles.registerTitle} ${styles.col12}`}>結帳</h2>
+            <StepProgress/>
+        </div>
+        <section className={styles.formContainer}>
+            <StepOneAddress />
+            <StepTwoShipping />
+            <StepThreeCreditcard />
         </section>
-      </div>
-      <section className="form-container">
-          <Step1Address/>
-          <Step2Shipping/>
-          <Step3Creditcard/>
       </section>
-      <section class="progress-control-container col col-lg-6 col-sm-12">
+      <section class={styles.progressControlContainer}>
           <ProgressControl/>
       </section>
     </main>

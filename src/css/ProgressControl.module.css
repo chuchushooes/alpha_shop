@@ -1,0 +1,48 @@
+.buttonGroup {
+  display: flex;
+  margin-top: 20px;
+}
+
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 174px;
+  height: 46px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border: 0px solid;
+  border-radius: 1em;
+  background: var(--pink);
+  color: #FFFFFF;
+  margin-left: auto
+}
+
+.rightArrow {
+  margin-left: 12px
+}
+
+.prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0px solid;
+  border-radius: 1em;
+  background-color: transparent;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000
+}
+
+.leftArrow {
+  margin-right: 12px;
+}
+
+.cursorPoint {
+  cursor: pointer;
+}
+
+.col12 {
+  composes: formBody from "./mainPage.module.css";
+}

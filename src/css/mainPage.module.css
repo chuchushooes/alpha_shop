@@ -1,0 +1,263 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Inter&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap);
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block
+}
+
+body {
+  line-height: 1
+}
+
+ol,
+ul {
+  list-style: none
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box
+}
+
+:root {
+  --white: #FFFFFF;
+  --pink: #F67599;
+  --grey-800: #2A2A2A;
+  --grey-700: #333333;
+  --grey-400: #808080;
+  --grey-300: #999999;
+  --site-edge-margin: 15px;
+  --main-font-family: 'Noto Sans TC', sans-serif
+}
+
+body {
+  --background-color: #FFFFFF;
+  --footer-background-color: #F6F7F8;
+  --nav-icon: #2A2A2A;
+  --social-icon: #808080;
+  --main-text: #2A2A2A;
+  --secondary-text: #808080;
+  --active-color: lightblue;
+  --undone-progress-border: #F0F0F5;
+  --done-progress-border: #000000;
+  --progress-current-color: #2A2A2A;
+  --progress-done-color: #FFFFFF;
+  --progress-undone-color: #AFB1BD;
+  --pg-addr-color: #FFFFFF;
+  --pg-addr-bg-color: #2A2A2A;
+  --input-label: #808080;
+  --input-border: #4A4A4A;
+  --input-text: #999999;
+  --select-arrow: #2A2A2A;
+  --select-true: #2A2A2A;
+  --select-false: #999999;
+  --product-action-text: #000000;
+  --product-action-bg: #F0F0F5;
+  --left-arrow: #000000;
+  background-color: var(--background-color);
+  color: var(--main-text);
+  font-family: var(--main-font-family);
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px
+}
+
+.siteMain {
+  height: 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-left: var(--site-edge-margin);
+  padding-right: var(--site-edge-margin);
+  background-color: inherit;
+}
+
+.mainContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+
+
+.registerContainer {
+  width: 50%;
+}
+
+.registerTitle {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--main-text)
+}
+
+.formContainer {
+  display: flex;
+  margin: 64px 0;
+  width: 100%;
+}
+
+.colLg6 {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 50%;
+  align-content: flex-start;
+  max-width: 50%
+}
+
+.col12 {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  align-content: flex-start;
+  max-width: 100%
+}
+
+.colSm12 {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  align-content: flex-start;
+  max-width: 100%
+}
+
+
+.progressControlContainer {
+  display: flex;
+  position: absolute;
+  justify-content: end;
+  width: 50%;
+  padding-top: 10px;
+  border-top: 1px solid #c9c9c9;
+}

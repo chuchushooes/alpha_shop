@@ -1,5 +1,5 @@
 import { ReactComponent as RightArrow } from '../icons/right-arrow.svg' //將 SVG 圖檔包裝為 Component
-// import { ReactComponent as LeftArrow } from '../icons/left-arrow.svg'
+import { ReactComponent as LeftArrow } from '../icons/left-arrow.svg'
 import styles from '../../css/ProgressControl.module.css'
 
 
@@ -12,7 +12,7 @@ export function ProgressControl () {
               <RightArrow className={`${styles.cursorPoint} ${styles.rightArrow}`}/>
             </button>
           </section>
-          {/* <section className={styles.buttonGroup} data-phase="shipping">
+          {/* <section className={styles.buttonGroupTwo} data-phase="shipping">
             <button className={styles.prev}>
                <LeftArrow className={`${styles.cursorPoint} ${styles.leftArrow}`}/>
               上一步
@@ -21,8 +21,8 @@ export function ProgressControl () {
               下一步
               <RightArrow className={`${styles.cursorPoint} ${styles.rightArrow}`}/>
             </button>
-          </section>
-          <section className={styles.buttonGroup} data-phase="credit-card">
+          </section> */}
+          {/* <section className={styles.buttonGroupTwo} data-phase="credit-card">
             <button className={styles.prev}>
               <LeftArrow className={`${styles.cursorPoint} ${styles.leftArrow}`}/>
               上一步

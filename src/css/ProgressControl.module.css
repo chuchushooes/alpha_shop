@@ -3,6 +3,12 @@
   margin-top: 20px;
 }
 
+.buttonGroupTwo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
 .next {
   display: flex;
   align-items: center;

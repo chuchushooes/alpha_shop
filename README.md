@@ -1,6 +1,18 @@
 # Alpha Shop
 
+一個簡單的結帳頁面，但還沒有換頁邏輯，練習使用 CSS Modules 減少重複語法，達成作用域。
 
+### Step1：寄送地址表單
+
+![image](https://github.com/chuchushooes/alpha_shop/blob/main/img/Address.png)
+
+### Step2：運送方式表單
+
+![image](https://github.com/chuchushooes/alpha_shop/blob/main/img/shipping.png)
+
+### Step3：付款資訊表單
+
+![image](https://github.com/chuchushooes/alpha_shop/blob/main/img/CreditCard.png)
 
 # Getting Started with Create React App
 

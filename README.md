@@ -1,6 +1,11 @@
 # Alpha Shop
 
-一個簡單的結帳頁面，但還沒有換頁邏輯，練習使用 CSS Modules 減少重複語法，達成作用域。
+`2022-11-08` 一個簡單的結帳頁面，但還沒有換頁邏輯，練習使用 CSS Modules 減少重複語法，達成作用域。
+`2022-11-14` 新增購物籃功能，練習用 props 導入 data。
+
+### 新增購物籃功能
+
+![image](https://github.com/chuchushooes/alpha_shop/blob/main/img/Cart-mewo.png)
 
 ### Step1：寄送地址表單
 

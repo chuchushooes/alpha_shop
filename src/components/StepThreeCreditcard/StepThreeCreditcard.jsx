@@ -1,4 +1,4 @@
-import styles from '../../css/StepThreeCreditcard.module.css'
+import styles from './StepThreeCreditcard.module.css'
 
 export function StepThreeCreditcard () {
   return (

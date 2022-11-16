@@ -1,4 +1,4 @@
-import styles from '../../css/StepTwoShipping.module.css'
+import styles from './StepTwoShipping.module.css'
 
 export function StepTwoShipping () {
   return (

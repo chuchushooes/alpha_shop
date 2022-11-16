@@ -1,4 +1,4 @@
-import styles from '../../css/stepOneAddress.module.css'
+import styles from './StepOneAddress.module.css'
 
 export function StepOneAddress () {
   return (

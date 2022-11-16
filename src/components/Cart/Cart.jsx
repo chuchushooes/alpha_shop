@@ -1,7 +1,7 @@
-import styles from '../../css/Cart.module.css'
-import { ReactComponent as ProductActionMinus} from '../icons/minus.svg'
-import { ReactComponent as ProductActionPlus} from '../icons/plus.svg'
-import { productItems } from '../data/data.jsx'
+import styles from './Cart.module.css'
+import { ReactComponent as ProductActionMinus} from '../assets/icons/minus.svg'
+import { ReactComponent as ProductActionPlus} from '../assets/icons/plus.svg'
+import { productItems } from '../assets/data/data.js'
 
 
 

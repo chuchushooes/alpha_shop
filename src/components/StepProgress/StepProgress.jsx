@@ -1,5 +1,5 @@
-import { ReactComponent as PgComplete } from '../icons/pg-complete.svg' //將 SVG 圖檔包裝為 Component
-import styles from '../../css/stepProgress.module.css'
+import { ReactComponent as PgComplete } from '../assets/icons/pg-complete.svg' //將 SVG 圖檔包裝為 Component
+import styles from './StepProgress.module.css'
 
 
 export function StepProgress () {

@@ -1,0 +1,24 @@
+.Step3CreditCard {
+  width: 100%;
+}
+
+.formTitle {
+  composes: formTitle from "../StepOneAddress/StepOneAddress.module.css";
+}
+
+.formBody {
+  padding: 10px 0px;
+  composes: formBody from "../StepOneAddress/StepOneAddress.module.css";
+}
+
+.col12 {
+  composes: formBody from "../../App.module.css";
+}
+
+.inputGroup {
+  composes: inputGroup from "../StepOneAddress/StepOneAddress.module.css";
+}
+
+.inputLabel {
+    composes: inputLabel from "../StepOneAddress/StepOneAddress.module.css";
+}

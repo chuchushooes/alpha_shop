@@ -50,5 +50,5 @@
 }
 
 .col12 {
-  composes: formBody from "./mainPage.module.css";
+  composes: formBody from "../../App.module.css";
 }

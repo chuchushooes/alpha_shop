@@ -3,13 +3,13 @@
 }
 
 .formTitle {
-  composes: formTitle from "./stepOneAddress.module.css";
+  composes: formTitle from "../StepOneAddress/StepOneAddress.module.css";
 }
 
 .formBody {
   height: 200px;
   padding: 10px 0px;
-  composes: formBody from "./stepOneAddress.module.css";
+  composes: formBody from "../StepOneAddress/StepOneAddress.module.css";
 }
 
 .radioGroup {
@@ -36,7 +36,7 @@
 }
 
 .col12 {
-  composes: col12 from "./mainPage.module.css";
+  composes: col12 from "../../App.module.css";
 }
 
 .radioText {

@@ -1,3 +1,13 @@
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 24px;
+  margin-top: 166px;
+  border: 1px solid #F0F0F5;
+  border-radius: 8px;
+  height: 5rem;
+}
+
 .cartTitle {
   display: flex;
   margin: 32px 0px;
@@ -103,4 +113,13 @@
   width: 27px;
   height: 26px;
   cursor: pointer
+}
+
+.colLg5 {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 50%;
+  align-content: flex-start;
+  max-width: 50%;
+  margin-left: 2rem
 }

@@ -5,19 +5,19 @@
 
 ### 新增購物籃功能
 
-![image](https://github.com/chuchushooes/alpha_shop/blob/main/img/Cart-mewo.png)
+![image](https://github.com/chuchushooes/alpha_shop/blob/main/src/components/assets/githubImg/Cart-mewo.png)
 
 ### Step1：寄送地址表單
 
-![image](https://github.com/chuchushooes/alpha_shop/blob/main/img/Address.png)
+![image](https://github.com/chuchushooes/alpha_shop/blob/main/src/components/assets/githubImg/Address.png)
 
 ### Step2：運送方式表單
 
-![image](https://github.com/chuchushooes/alpha_shop/blob/main/img/shipping.png)
+![image](https://github.com/chuchushooes/alpha_shop/blob/main/src/components/assets/githubImg/shipping.png)
 
 ### Step3：付款資訊表單
 
-![image](https://github.com/chuchushooes/alpha_shop/blob/main/img/CreditCard.png)
+![image](https://github.com/chuchushooes/alpha_shop/blob/main/src/components/assets/githubImg/CreditCard.png)
 
 # Getting Started with Create React App
 

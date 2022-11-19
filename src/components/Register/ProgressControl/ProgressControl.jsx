@@ -2,8 +2,11 @@ import { ReactComponent as RightArrow } from '../../assets/icons/right-arrow.svg
 import { ReactComponent as LeftArrow } from '../../assets/icons/left-arrow.svg'
 import styles from './ProgressControl.module.css'
 
+//由父層 Register 接收 currentStep 和 onClick 變數，去做選擇判斷操控 css
+//這裡的 jsx 是下條件式，當為 true 時就顯示，使用二種方法，一種是三元運算子，另一種是短路 && (true時才顯示)
+//onClick={handleNextClick}，當元件被點擊時才會執行，並不會自動執行(監聽事件)
 function ProgressControl(props) {
-  //點擊button進行換頁
+  //點擊button進行換頁，props.onClick()，指 setStep 為 props.currentStep + 1，改變狀態
   function handleNextClick() {
     if (props.currentStep < 3) {
       props.onClick(props.currentStep + 1)

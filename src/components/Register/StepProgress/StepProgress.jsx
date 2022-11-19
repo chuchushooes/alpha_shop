@@ -1,6 +1,7 @@
 // import { ReactComponent as PgComplete } from '../../assets/icons/pg-complete.svg' //將 SVG 圖檔包裝為 Component
 import styles from './StepProgress.module.css'
 
+//由父層 Register 接收 currentStep 變數，去做選擇判斷操控css
 function StepProgress(props) {
   return (
     <section className={styles.progressContainer}>

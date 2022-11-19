@@ -1,0 +1,40 @@
+.registerContainer {
+  width: 50%;
+}
+
+.formContainer {
+  display: flex;
+  margin: 64px 0;
+  width: 100%;
+}
+
+.registerTitle {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--main-text)
+}
+
+.colLg6 {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 50%;
+  align-content: flex-start;
+  max-width: 50%
+}
+
+.col12 {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  align-content: flex-start;
+  max-width: 100%
+}
+
+.colSm12 {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  align-content: flex-start;
+  max-width: 100%
+}

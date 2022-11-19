@@ -213,10 +213,6 @@ li {
 }
 
 
-.registerContainer {
-  width: 50%;
-}
-
 .registerTitle {
   font-weight: 700;
   font-size: 32px;
@@ -224,11 +220,6 @@ li {
   color: var(--main-text)
 }
 
-.formContainer {
-  display: flex;
-  margin: 64px 0;
-  width: 100%;
-}
 
 .colLg6 {
   display: flex;

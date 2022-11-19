@@ -117,8 +117,8 @@
 
 .colLg5 {
   display: flex;
-  flex-wrap: wrap;
-  flex: 0 0 50%;
+  /* flex-wrap: wrap; */
+  flex: 0 0 45%;
   align-content: flex-start;
   max-width: 50%;
   margin-left: 2rem

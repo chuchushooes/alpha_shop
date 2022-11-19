@@ -2,7 +2,7 @@ import styles from './StepTwoShipping.module.css'
 
 function StepTwoShipping() {
   return (
-    <form className={styles.StepTwoShipping} style={{ display: 'none' }} data-phase="shipping">
+    <form className={styles.StepTwoShipping} data-phase="shipping">
       <h3 className={styles.formTitle}>運送方式</h3>
       <section className={styles.formBody}>
         <label className={styles.radioGroup} data-price="0">

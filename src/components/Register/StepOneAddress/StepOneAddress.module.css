@@ -1,5 +1,5 @@
 .Step1Address {
-  width: 100%;
+  flex: 1; /* 填滿空間 */
 }
 
 .formBody {

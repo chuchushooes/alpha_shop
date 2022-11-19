@@ -2,7 +2,7 @@ import styles from './StepThreeCreditcard.module.css'
 
 function StepThreeCreditcard() {
   return (
-    <form className={styles.Step3CreditCard} data-phase="credit-card">
+    <form className={styles.Step3CreditCard} style={{ display: 'none' }} data-phase="credit-card">
       <h3 className={styles.formTitle}>付款資訊</h3>
       <section className={styles.formBody}>
         <div className={styles.col12}>

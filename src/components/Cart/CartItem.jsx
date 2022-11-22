@@ -1,6 +1,12 @@
 import { ReactComponent as ProductActionMinus } from '../assets/icons/minus.svg'
 import { ReactComponent as ProductActionPlus } from '../assets/icons/plus.svg'
 import styles from './Cart.module.css'
+import PropTypes from 'prop-types'
+
+CartItem.propTypes = {
+  products: PropTypes.object,
+  setProducts: PropTypes.func
+}
 
 //接收到父元件的props
 function CartItem({ products, setProducts }) {
@@ -18,7 +24,7 @@ function CartItem({ products, setProducts }) {
         return product
       }
     })
-    //每次扣完都會重新生出一個array
+    //每次扣完都會重新生出一個obj
     NewProductList = NewProductList.filter((product) => product.quantity > 0)
     setProducts(NewProductList)
   }

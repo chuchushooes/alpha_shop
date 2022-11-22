@@ -8,6 +8,7 @@ import { useState } from 'react'
 
 //傳遞 props 給 StepProgress 和 ProgressControl，去做 useState 控制
 //條件式控制渲染的頁面，使用&&，判斷 currentStep 進行切換
+
 function Register() {
   const [currentStep, setStep] = useState(1)
   return (

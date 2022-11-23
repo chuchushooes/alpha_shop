@@ -1,6 +1,6 @@
 import styles from './Cart.module.css'
 import CartItem from './CartItem'
-import { productItems } from '../assets/data/data.js'
+import { productItems } from '../../assets/data/data.js'
 import { useState } from 'react'
 
 function Cart() {

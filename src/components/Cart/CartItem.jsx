@@ -1,82 +1,61 @@
-import { ReactComponent as ProductActionMinus } from '../assets/icons/minus.svg'
-import { ReactComponent as ProductActionPlus } from '../assets/icons/plus.svg'
+/* eslint-disable react/prop-types */
+import { ReactComponent as ProductActionMinus } from '../../assets/icons/minus.svg'
+import { ReactComponent as ProductActionPlus } from '../../assets/icons/plus.svg'
 import styles from './Cart.module.css'
-import PropTypes from 'prop-types'
+import { useState } from 'react'
 
-CartItem.propTypes = {
-  products: PropTypes.object,
-  setProducts: PropTypes.func
-}
-
-//接收到父元件的props
-function CartItem({ products, setProducts }) {
+const CartItem = (props) => {
+  //初始值使用productItems
+  //當點擊 +- button，進行狀態改變進而從新渲染元件
+  //狀態的改變是由 CartItem 去做操作
+  const [isQuantity, setQuantity] = useState(props.quantity)
   // onClick calling a function，這裡要注意onClink的寫法(匿名)，不是自動執行，而是被點擊時執行
+
   // handleMinus
-  function handleMinusClick(CartItemId) {
-    let NewProductList = products.map((product) => {
-      if (product.id === CartItemId) {
-        return {
-          // Create a *new* object with changes，這裡注意要新增新物件避免mutable
-          ...product,
-          quantity: product.quantity - 1
-        }
-      } else {
-        return product
-      }
-    })
-    //每次扣完都會重新生出一個obj
-    NewProductList = NewProductList.filter((product) => product.quantity > 0)
-    setProducts(NewProductList)
+  // 點擊時 item 數量扣 1，同時 item 總價也扣 1 個單價
+  // 注意這裡更新狀態的方式，是利用前一個狀態值去處理動作
+  // 而不是setQuantity(quantityMinus - 1)，這是直接取代前一狀態值
+  function handleMinusClick() {
+    setQuantity((quantityMinus) => quantityMinus - 1)
+    props.itemTotalPrice((itemTotal) => itemTotal - props.price)
   }
+
   // handlePlus
-  function handlePlusClick(CartItemId) {
-    const NewProductList = products.map((product) => {
-      if (product.id === CartItemId) {
-        return {
-          // Create a *new* object with changes
-          ...product,
-          quantity: product.quantity + 1
-        }
-      } else {
-        return product
-      }
-    })
-    setProducts(NewProductList)
+  // 點擊時 item 數量 + 1，同時 item 總價也 + 1 個單價
+  function handlePlusClick() {
+    setQuantity((quantityPlus) => quantityPlus + 1)
+    props.itemTotalPrice((itemTotal) => itemTotal + props.price)
   }
-  return (
-    <>
-      {products.map((CartItem) => (
-        <div
-          key={CartItem.id}
-          id={CartItem.id}
-          className={`${styles.productContainer} `}
-          data-count="0"
-          data-price={CartItem.price}>
-          <img className={styles.imgContainer} src={CartItem.img} alt={CartItem.imgUrl} />
-          <div className={styles.productInfo}>
-            <div className={styles.productName}>{CartItem.name}</div>
-            <div className={styles.productControlContainer}>
-              <div className={styles.productControl}>
-                <ProductActionMinus
-                  className={styles.productAction}
-                  onClick={() => handleMinusClick(CartItem.id)}
-                />
-                <span className={styles.productCount}>{CartItem.quantity}</span>
-                <ProductActionPlus
-                  className={styles.productAction}
-                  onClick={() => handlePlusClick(CartItem.id)}
-                />
-              </div>
-            </div>
-            <div className={styles.price}>
-              {`單價 $`}
-              {CartItem.price}
+
+  // 判斷數量是否為0
+  if (isQuantity > 0) {
+    return (
+      <div
+        key={props.id}
+        id={props.id}
+        className={`${styles.productContainer} `}
+        data-count="0"
+        data-price={props.price}>
+        <img className={styles.imgContainer} src={props.image} alt={props.image} />
+        <div className={styles.productInfo}>
+          <div className={styles.productName}>{props.name}</div>
+          <div className={styles.productControlContainer}>
+            <div className={styles.productControl}>
+              <ProductActionMinus className={styles.productAction} onClick={handleMinusClick} />
+              <span className={styles.productCount}>{isQuantity}</span>
+              <ProductActionPlus className={styles.productAction} onClick={handlePlusClick} />
             </div>
           </div>
+          <div className={styles.price}>
+            {`單品總價 $`}
+            {props.price * isQuantity}
+          </div>
         </div>
-      ))}
-    </>
-  )
+      </div>
+    )
+  } else {
+    return <></>
+  }
 }
 
 export default CartItem

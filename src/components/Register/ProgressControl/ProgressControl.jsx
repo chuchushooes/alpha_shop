@@ -1,5 +1,5 @@
-import { ReactComponent as RightArrow } from '../../assets/icons/right-arrow.svg' //將 SVG 圖檔包裝為 Component
-import { ReactComponent as LeftArrow } from '../../assets/icons/left-arrow.svg'
+import { ReactComponent as RightArrow } from '../../../assets/icons/right-arrow.svg' //將 SVG 圖檔包裝為 Component
+import { ReactComponent as LeftArrow } from '../../../assets/icons/left-arrow.svg'
 import styles from './ProgressControl.module.css'
 import PropTypes from 'prop-types'
 

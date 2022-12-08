@@ -4,24 +4,27 @@ import { productItems } from '../../assets/data/data.js'
 import { useState } from 'react'
 
 function Cart() {
-  //初始值使用productItems
-  //當點擊 +- button，進行狀態改變進而從新渲染元件
-  //狀態的改變是由 CartItem 去做操作
-  const [items, setItems] = useState(productItems)
-
-  function TotalPrice({ price }) {
-    let total = 0
-    price.map((item) => {
-      total += item.price * item.quantity
-    })
-    return total
-  }
+  //設定TTL值，當count改變就會重新渲染
+  const [itemPrice, setItemPrice] = useState(0)
+  let total = 0
 
   return (
     <section className={`${styles.cartContainer} ${styles.colLg5}`}>
       <h3 className={styles.cartTitle}>購物籃</h3>
       <section className={`${styles.cartList}`} data-total-price="0">
-        <CartItem products={items} setProducts={setItems} />
+        {productItems.map((item) => {
+          total += item.price * item.quantity //小計的預設值(data數量*價錢)
+          return (
+            <CartItem
+              key={item.id}
+              price={item.price}
+              image={item.img}
+              name={item.name}
+              quantity={item.quantity}
+              itemTotalPrice={setItemPrice}
+            />
+          )
+        })}
       </section>
       <div className={styles.cartInfoWrap}>
         <section className={`${styles.cartInfo} ${styles.col12} `}>
@@ -30,10 +33,7 @@ function Cart() {
         </section>
         <section className={`${styles.cartInfo} ${styles.col12} `}>
           <div className={styles.cartInfoText}>小計</div>
-          <div className={styles.cartInfoPrice}>
-            {'$ '}
-            <TotalPrice price={items} />
-          </div>
+          <div className={styles.cartInfoPrice}>{total + itemPrice}</div>
         </section>
       </div>
     </section>

@@ -1,18 +1,21 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react'
+import { useContext } from 'react'
+import { CreditCardContext } from './CreditCardForm'
 
 function CreditCardFormInput(props) {
-  const [value, setValue] = useState('')
-
+  const creditCardContext = useContext(CreditCardContext)
+  const { form, handleFormChange } = creditCardContext
   const { type = 'text', name, placeholder = 'John Doe' } = props
-
-  const onChange = (e) => {
-    setValue(e.target.value)
-  }
 
   return (
     <div className="FormInput">
-      <input type={type} name={name} value={value} placeholder={placeholder} onChange={onChange} />
+      <input
+        type={type}
+        name={name}
+        value={form[name]}
+        placeholder={placeholder}
+        onChange={handleFormChange}
+      />
     </div>
   )
 }

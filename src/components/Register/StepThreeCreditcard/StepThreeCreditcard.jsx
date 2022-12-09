@@ -1,4 +1,5 @@
 import styles from './StepThreeCreditcard.module.css'
+import CreditCardFormInput from '../../CreditCardFormInput'
 
 function StepThreeCreditcard() {
   return (
@@ -8,23 +9,38 @@ function StepThreeCreditcard() {
         <div className={styles.col12}>
           <div className={styles.inputGroup}>
             <div className={styles.inputLabel}>持卡人姓名</div>
-            <input type="text" placeholder="John Doe" />
+            <CreditCardFormInput
+              label="持卡人姓名"
+              name="holderName"
+              type="text"
+              placeholder="John Doe"
+            />
           </div>
         </div>
         <div className={styles.col12}>
           <div className={styles.inputGroup}>
             <div className={styles.inputLabel}>卡號</div>
-            <input type="text" placeholder="1111 2222 3333 4444" />
+            <CreditCardFormInput
+              label="卡號"
+              name="cardNumber"
+              type="text"
+              placeholder="1111 2222 3333 4444"
+            />
           </div>
         </div>
         <div className={styles.col12}>
           <div className={styles.inputGroup}>
             <div className={styles.inputLabel}>有效期限</div>
-            <input type="text" placeholder="MM/YY" />
+            <CreditCardFormInput
+              label="有效期限"
+              name="expireDate"
+              type="text"
+              placeholder="MM/YY"
+            />
           </div>
           <div className={styles.inputGroup}>
             <div className={styles.inputLabel}>CVC / CCV</div>
-            <input type="text" placeholder="123" />
+            <CreditCardFormInput label="CVC" name="CVC" type="text" placeholder="123" />
           </div>
         </div>
       </section>

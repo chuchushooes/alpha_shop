@@ -2,9 +2,13 @@
 import { useState } from 'react'
 import { createContext } from 'react'
 
+/*送出表單功能(未完成) */
 export const CreditCardContext = createContext({
   form: {},
-  handleFormChange: () => {}
+  handleFormChange: () => {},
+  handleFormSubmit: () => {
+    alert(`Success`)
+  }
 })
 
 function CreditCardForm(props) {
@@ -21,9 +25,14 @@ function CreditCardForm(props) {
     console.log('Form changed: ', updatedForm)
     setForm(updatedForm)
   }
+
+  const handleFormSubmit = (form) => {
+    console.log(`${form}`)
+  }
+
   return (
     <form className="CreditCardForm">
-      <CreditCardContext.Provider value={{ form, handleFormChange }}>
+      <CreditCardContext.Provider value={{ form, handleFormChange, handleFormSubmit }}>
         {children}
       </CreditCardContext.Provider>
     </form>

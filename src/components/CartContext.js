@@ -18,4 +18,4 @@ const productItems = [
 ]
 
 // 將 Product 初始物件資料放入 context 內
-export const ProductsContext = createContext(productItems)
+export const CartContext = createContext(productItems)

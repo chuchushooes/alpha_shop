@@ -2,6 +2,8 @@ import { ReactComponent as RightArrow } from '../../../assets/icons/right-arrow.
 import { ReactComponent as LeftArrow } from '../../../assets/icons/left-arrow.svg'
 import styles from './ProgressControl.module.css'
 import PropTypes from 'prop-types'
+import { useContext } from 'react'
+import { CreditCardContext } from '../../CreditCardForm'
 
 ProgressControl.propTypes = {
   currentStep: PropTypes.number,
@@ -13,6 +15,8 @@ ProgressControl.propTypes = {
 //onClick={handleNextClick}，當元件被點擊時才會執行，並不會自動執行(監聽事件)
 function ProgressControl(props) {
   //點擊button進行換頁，props.onClick()，指 setStep 為 props.currentStep + 1，改變狀態
+
+  const { handleFormSubmit } = useContext(CreditCardContext)
 
   function handleNextClick() {
     if (props.currentStep < 3) {
@@ -54,7 +58,7 @@ function ProgressControl(props) {
             <LeftArrow className={`${styles.cursorPoint} ${styles.leftArrow}`} />
             上一步
           </button>
-          <button className={`${styles.next} ${styles.cursorPoint}`} onClick={handleNextClick}>
+          <button className={`${styles.next} ${styles.cursorPoint}`} onClick={handleFormSubmit}>
             確認下單
           </button>
         </section>

@@ -29,13 +29,13 @@ function CreditCardForm(props) {
   const handleFormSubmit = (form) => {
     console.log(`${form}`)
   }
-
+  // form不能崁套，所以外層的form要改為div的標籤
   return (
-    <form className="CreditCardForm">
+    <div className="CreditCardForm">
       <CreditCardContext.Provider value={{ form, handleFormChange, handleFormSubmit }}>
         {children}
       </CreditCardContext.Provider>
-    </form>
+    </div>
   )
 }
 

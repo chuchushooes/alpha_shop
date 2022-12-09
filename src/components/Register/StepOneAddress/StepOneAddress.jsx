@@ -1,5 +1,5 @@
 import styles from './StepOneAddress.module.css'
-
+//設定select defaultValue={''}，為了讓表單保持一致性，所以使用value值做設定
 function StepOneAddress() {
   return (
     <form className={styles.Step1Address} data-phase="address">
@@ -9,10 +9,8 @@ function StepOneAddress() {
           <div className={styles.inputGroup}>
             <div className={styles.inputLabel}>稱謂</div>
             <div className={styles.selectContainer}>
-              <select>
-                <option value="mr" selected>
-                  先生
-                </option>
+              <select defaultValue={'mr'}>
+                <option value="mr">先生</option>
                 <option value="ms">女士</option>
                 <option value="mx">不明</option>
               </select>
@@ -37,7 +35,7 @@ function StepOneAddress() {
           <div className={styles.inputGroup}>
             <div className={styles.inputLabel}>縣市</div>
             <div className={styles.selectContainer}>
-              <select required>
+              <select defaultValue={''} required>
                 <option value="">請選擇縣市</option>
                 <option value="KLU">基隆市</option>
                 <option value="TPH">新北市</option>

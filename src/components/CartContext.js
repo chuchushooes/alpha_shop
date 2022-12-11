@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 
-const productItems = [
+export const productItems = [
   {
     id: '1',
     name: '貓咪罐罐',

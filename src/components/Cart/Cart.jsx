@@ -1,13 +1,15 @@
 import styles from './Cart.module.css'
 import CartItem from './CartItem'
 // 已由context 取代 import { productItems } from '../../assets/data/data.js'
-import { useState, useContext } from 'react'
-import { CartContext } from '../CartContext.js'
+import { useState } from 'react'
+// import { CartContext } from '../CartContext.js'
+import { productItems } from '../CartContext'
 
 function Cart() {
   //設定TTL值，當count改變就會重新渲染
   const [itemPrice, setItemPrice] = useState(0)
-  const productItems = useContext(CartContext) // 從Cart取出context資料使用
+  // const [totalPrice, setTotalPrice] = useContext(CartContext)
+
   let total = 0
 
   return (

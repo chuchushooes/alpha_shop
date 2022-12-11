@@ -4,6 +4,7 @@ import styles from './ProgressControl.module.css'
 import PropTypes from 'prop-types'
 import { useContext } from 'react'
 import { CreditCardContext } from '../../CreditCardFormContext'
+import { CartContext } from '../../CartContext'
 
 ProgressControl.propTypes = {
   currentStep: PropTypes.number,
@@ -14,15 +15,21 @@ ProgressControl.propTypes = {
 //這裡的 jsx 是下條件式，當為 true 時就顯示，使用二種方法，一種是三元運算子，另一種是短路 && (true時才顯示)
 //onClick={handleNextClick}，當元件被點擊時才會執行，並不會自動執行(監聽事件)
 function ProgressControl(props) {
-  //點擊button進行換頁，props.onClick()，指 setStep 為 props.currentStep + 1，改變狀態
+  const productItem = useContext(CartContext)
   const { creditCardInfo } = useContext(CreditCardContext)
 
+  // context使用信用卡資料
   // 確認下單印出信用卡資訊及購物車小計金額
   function handleFormSubmit() {
     console.log({ creditCardInfo })
-    // console.log(`Total Price is: $${Total(products)}`)
+    console.log(`Total Price is: $${Total(productItem)}`)
   }
 
+  function Total(productItem) {
+    console.log(typeof productItem) //物件
+  }
+
+  //點擊button進行換頁，props.onClick()，指 setStep 為 props.currentStep + 1，改變狀態
   function handleNextClick() {
     if (props.currentStep < 3) {
       props.onClick(props.currentStep + 1)

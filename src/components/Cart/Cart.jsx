@@ -8,7 +8,6 @@ import { productItems } from '../CartContext'
 function Cart() {
   //設定TTL值，當count改變就會重新渲染
   const [itemPrice, setItemPrice] = useState(0)
-  // const [totalPrice, setTotalPrice] = useContext(CartContext)
 
   let total = 0
 

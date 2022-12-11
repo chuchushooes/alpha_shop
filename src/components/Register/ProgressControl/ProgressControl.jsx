@@ -26,7 +26,12 @@ function ProgressControl(props) {
   }
 
   function Total(productItem) {
-    console.log(typeof productItem) //物件
+    let total = 0
+    console.log(productItem)
+    productItem.forEach((product) => {
+      total += product.price * product.quantity
+    })
+    return total
   }
 
   //點擊button進行換頁，props.onClick()，指 setStep 為 props.currentStep + 1，改變狀態

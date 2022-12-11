@@ -3,7 +3,7 @@ import { ReactComponent as LeftArrow } from '../../../assets/icons/left-arrow.sv
 import styles from './ProgressControl.module.css'
 import PropTypes from 'prop-types'
 import { useContext } from 'react'
-import { CreditCardContext } from '../../CreditCardForm'
+import { CreditCardContext } from '../../CreditCardFormContext'
 
 ProgressControl.propTypes = {
   currentStep: PropTypes.number,
@@ -15,8 +15,13 @@ ProgressControl.propTypes = {
 //onClick={handleNextClick}，當元件被點擊時才會執行，並不會自動執行(監聽事件)
 function ProgressControl(props) {
   //點擊button進行換頁，props.onClick()，指 setStep 為 props.currentStep + 1，改變狀態
+  const { creditCardInfo } = useContext(CreditCardContext)
 
-  const { handleFormSubmit } = useContext(CreditCardContext)
+  // 確認下單印出信用卡資訊及購物車小計金額
+  function handleFormSubmit() {
+    console.log({ creditCardInfo })
+    // console.log(`Total Price is: $${Total(products)}`)
+  }
 
   function handleNextClick() {
     if (props.currentStep < 3) {

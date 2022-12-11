@@ -11,6 +11,7 @@ import { useState } from 'react'
 
 function Register() {
   const [currentStep, setStep] = useState(1)
+
   return (
     <section className={`${styles.registerContainer} ${styles.colLg6} ${styles.colSm12}`}>
       <h2 className={`${styles.registerTitle} ${styles.col12}`}>結帳</h2>

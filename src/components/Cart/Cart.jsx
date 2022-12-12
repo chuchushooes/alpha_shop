@@ -20,6 +20,7 @@ function Cart() {
           return (
             <CartItem
               key={item.id}
+              id={item.id}
               price={item.price}
               image={item.img}
               name={item.name}

@@ -15,20 +15,19 @@ ProgressControl.propTypes = {
 //這裡的 jsx 是下條件式，當為 true 時就顯示，使用二種方法，一種是三元運算子，另一種是短路 && (true時才顯示)
 //onClick={handleNextClick}，當元件被點擊時才會執行，並不會自動執行(監聽事件)
 function ProgressControl(props) {
-  const productItem = useContext(CartContext)
+  const { cartContext } = useContext(CartContext)
   const { creditCardInfo } = useContext(CreditCardContext)
 
   // context使用信用卡資料
   // 確認下單印出信用卡資訊及購物車小計金額
   function handleFormSubmit() {
     console.log({ creditCardInfo })
-    console.log(`Total Price is: $${Total(productItem)}`)
+    console.log(`總金額為: $${Total(cartContext)}`)
   }
 
-  function Total(productItem) {
+  function Total(cartContext) {
     let total = 0
-    console.log(productItem)
-    productItem.forEach((product) => {
+    cartContext.forEach((product) => {
       total += product.price * product.quantity
     })
     return total

@@ -11,7 +11,7 @@ function StepThreeCreditcard() {
       ...creditCardInfo,
       [e.target.name]: e.target.value
     }
-    console.log('Form changed: ', updatedForm)
+    // console.log('Form changed: ', updatedForm)
     setCreditCardInfo(updatedForm)
   }
 
